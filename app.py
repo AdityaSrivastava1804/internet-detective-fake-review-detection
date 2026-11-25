@@ -60,6 +60,12 @@ st.markdown(
         padding: 14px 18px; border-radius: 15px;
       }
       .note { color: #486581; font-size: .92rem; }
+            /* Make alert text black on yellow backgrounds. */
+      div[data-testid="stAlert"] [data-testid="stMarkdownContainer"],
+      div[data-testid="stAlert"] [data-testid="stMarkdownContainer"] * {
+        color: #000000 !important;
+      }
+
       .review-highlight {
         background: #ffffff; border: 1px solid #dbe7f2; border-radius: 12px;
         padding: 1rem; line-height: 1.8; white-space: normal;
