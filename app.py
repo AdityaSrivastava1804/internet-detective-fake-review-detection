@@ -60,12 +60,23 @@ st.markdown(
         padding: 14px 18px; border-radius: 15px;
       }
       .note { color: #486581; font-size: .92rem; }
-            /* Make alert text black on yellow backgrounds. */
+      /* Keep Streamlit warning and notice text readable on its yellow background. */
       div[data-testid="stAlert"] [data-testid="stMarkdownContainer"],
       div[data-testid="stAlert"] [data-testid="stMarkdownContainer"] * {
         color: #000000 !important;
       }
-
+      div[data-testid="stAlertContainer"]:has([data-testid="stAlertContentWarning"]) {
+        background-color: #fff3b0 !important;
+      }
+      div[data-testid="stAlertContainer"]:has([data-testid="stAlertContentError"]) {
+        background-color: #fee2e2 !important;
+      }
+      div[data-testid="stAlertContainer"]:has([data-testid="stAlertContentInfo"]) {
+        background-color: #dbeafe !important;
+      }
+      div[data-testid="stAlertContainer"]:has([data-testid="stAlertContentSuccess"]) {
+        background-color: #dcfce7 !important;
+      }
       .review-highlight {
         background: #ffffff; border: 1px solid #dbe7f2; border-radius: 12px;
         padding: 1rem; line-height: 1.8; white-space: normal;
